@@ -2,9 +2,9 @@ const express = require('express')
 const app = express ()
 
 const mongoose = require('mongoose')
-const url = 'mongodb://localhost/AnimalDB'
+const url = 'mongodb://admin:admin123@cluster0-shard-00-00.u1nr6.mongodb.net:27017,cluster0-shard-00-01.u1nr6.mongodb.net:27017,cluster0-shard-00-02.u1nr6.mongodb.net:27017/animalDB?ssl=true&replicaSet=atlas-plrw3i-shard-0&authSource=admin&retryWrites=true&w=majority'
 
-mongoose.connect(url, {useNewUrlParser:true})
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 const dbcon = mongoose.connection
 
 dbcon.on('error', (error) => console.error(error))
