@@ -7,11 +7,11 @@ Aplikasi Web yang kami rancang berupa aplikasi yang menampilkan daftar hewan-hew
 Dengan adanya aplikasi web ini, diharapkan dapat mempermudah dalam pendataan dan pengelolaan data pada suatu shelter
 
 ## CRUD Actions
-  GET all data
-  GET data by id
-  POST new data
-  PATCH existing data by id
-  DELETE specific data by id
+- GET all data
+- GET data by id
+- POST new data
+- PATCH existing data by id
+- DELETE specific data by id
   
 **Anggota Kelompok**:
 - Christianto Natalio Saleky - (18/431998/TK/48015) 
