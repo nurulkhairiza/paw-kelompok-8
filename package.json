@@ -4,7 +4,7 @@
   "description": "API to document animal being and have been sheltered",
   "main": "server.js",
   "scripts": {
-    "start" : "nodemon server.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kelompok 8",
@@ -16,5 +16,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurulkhairiza/paw-kelompok-8.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nurulkhairiza/paw-kelompok-8/issues"
+  },
+  "homepage": "https://github.com/nurulkhairiza/paw-kelompok-8#readme"
 }
