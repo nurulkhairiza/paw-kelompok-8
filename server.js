@@ -15,6 +15,9 @@ app.use(express.json())
 const animalRouter = require('./routers/animals')
 app.use('/animals', animalRouter)
 
+const indexRouter = require('./routers/index')
+app.use('/', indexRouter)
+
 // Create a server to listen at port 8080
 const port = process.env.PORT || 8080;
 app.listen(port,() => console.log("Animal API listening at localhost %s ", port));
