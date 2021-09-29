@@ -12,6 +12,8 @@ Dengan adanya aplikasi web ini, diharapkan dapat mempermudah dalam pendataan dan
 - POST new data of an animal
 - PATCH existing data of an animal by id
 - DELETE specific data of an animal by id
+
+slide : https://docs.google.com/presentation/d/1xLVo09vWv4EB9XRWY0Tfi_dSbW5_46PwxzyfqDAFdbY/edit?usp=sharing
   
 **Anggota Kelompok**:
 - Christianto Natalio Saleky - (18/431998/TK/48015) 
