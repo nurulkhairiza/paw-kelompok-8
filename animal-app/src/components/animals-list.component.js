@@ -24,7 +24,7 @@ export default class AnimalList extends Component {
       }
     
       DataTable() {
-        return this.state.animal.map((res, i) => {
+        return this.state.animals.map((res, i) => {
           if (useState(false)) {
             return <p>Data is loading...</p>;
           }
