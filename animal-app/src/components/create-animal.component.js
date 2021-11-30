@@ -98,7 +98,7 @@ export default class CreateAnimal extends Component {
       name: '',
       species: '',
       age: '',
-      adopted: ''
+      adopted: false
     }
   }
 
@@ -115,7 +115,7 @@ export default class CreateAnimal extends Component {
   }
 
   onChangeAnimalAdopted(e) {
-    this.setState({ adopted: e.target.value })
+    this.setState({ adopted: !this.state.adopted })
   }  
 
   onSubmit(e) {
@@ -131,12 +131,13 @@ export default class CreateAnimal extends Component {
     axios.post('http://localhost:8080/animals/create-animal', animalObject)
       .then(res => console.log(res.data));
 
-    this.setState({
-      name: '',
-      species: '',
-      age: '',
-      adopted: ''
-    });
+    this.props.history.push('/')
+    // this.setState({
+    //   name: '',
+    //   species: '',
+    //   age: '',
+    //   adopted: false
+    // });
   }
 
   render() {
@@ -159,11 +160,11 @@ export default class CreateAnimal extends Component {
 
         <Form.Group controlId="Adopted">
           <Form.Label>Adopted</Form.Label>
-          <Form.Control type="text" value={this.state.adopted} onChange={this.onChangeAnimalAdopted} placeholder="Yes / No"/>
+          <Form.Check type="checkbox" label="Adopted" value={this.state.adopted} checked={this.state.adopted} onChange={this.onChangeAnimalAdopted} />
         </Form.Group>
 
-        <Button variant="primary" size="lg" block="block" type="submit">
-          Add Animal List
+        <Button variant="primary" size="lg" block="block" type="submit" > 
+          Add Animal
         </Button>
       </Form>
     </div>);

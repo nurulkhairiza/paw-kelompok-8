@@ -94,7 +94,7 @@ function App() {
           <Container>
 
             <Navbar.Brand>
-              <Link to={"/create-animal"} className="nav-link">
+              <Link to={"/animal-list"} className="nav-link">
                 Animal Shelter
               </Link>
             </Navbar.Brand>
@@ -102,7 +102,7 @@ function App() {
             <Nav className="justify-content-end">
               <Nav>
                 <Link to={"/create-animal"} className="nav-link">
-                  Add Animal List
+                  Add Animal 
                 </Link>
               </Nav>
 

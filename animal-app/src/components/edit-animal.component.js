@@ -196,7 +196,7 @@ export default class EditAnimal extends Component {
           <Form.Control type="text" value={this.state.adopted} onChange={this.onChangeAnimalAdopted} placeholder="Yes / No"/>
         </Form.Group>
         
-        <Button variant="primary" size="lg" block="block" type="submit">
+        <Button variant="primary" size="lg" block="block" type="submit" >
           Update
         </Button>
       </Form>
