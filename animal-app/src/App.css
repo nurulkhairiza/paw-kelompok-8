@@ -46,6 +46,21 @@ body h3 {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
+  margin-top: 20px;
+  margin-right: 50px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button-cancel {
+  background-color: #eb7680; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-right: 50px;
   display: inline-block;
   font-size: 16px;
 }

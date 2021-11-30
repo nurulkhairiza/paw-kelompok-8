@@ -113,7 +113,7 @@ export default class EditAnimal extends Component {
     this.state = {
       name: '',
       species: '',
-      age: '',
+      age : '',
       adopted:false
     }
   }
@@ -196,10 +196,10 @@ export default class EditAnimal extends Component {
           <Form.Check type="checkbox" label="Adopted" checked={this.state.adopted} value={this.state.adopted} onChange={this.onChangeAnimalAdopted} placeholder="Yes / No"/>
         </Form.Group>
         
-        <Button variant="primary" size="lg" block="block" type="submit" >
+        <Button className = "button" variant="primary" size="lg" block="block" type="submit"  >
           Update
         </Button>
-        <Button size="lg" block="block"  variant="danger" type="button" href={'/animal-list'} >
+        <Button className="button-cancel" size="lg" block="block"  variant="danger" type="button" href={'/animal-list'} >
           Cancel
         </Button>
       </Form>

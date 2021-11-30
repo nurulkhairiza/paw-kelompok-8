@@ -163,7 +163,7 @@ export default class CreateAnimal extends Component {
           <Form.Check type="checkbox" label="Adopted" value={this.state.adopted} checked={this.state.adopted} onChange={this.onChangeAnimalAdopted} />
         </Form.Group>
 
-        <Button variant="primary" size="lg" block="block" type="submit" > 
+        <Button className='button' variant="primary" size="lg" block="block" type="submit" > 
           Add Animal
         </Button>
       </Form>
