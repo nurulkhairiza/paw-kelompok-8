@@ -13,7 +13,7 @@ const animalSchema = new mongoose.Schema({
     },
 
     age : {
-        type : String,
+        type : Date,
         required : false,
         default : null
     },
@@ -28,7 +28,7 @@ const animalSchema = new mongoose.Schema({
 //  {
 //      collection: 'animals'
 //     }
-// {timestamps : true}
+   ,{timestamps : true}
 
 )
 

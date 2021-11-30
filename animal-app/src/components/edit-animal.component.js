@@ -114,7 +114,7 @@ export default class EditAnimal extends Component {
       name: '',
       species: '',
       age: '',
-      adopted:''
+      adopted:false
     }
   }
 
@@ -187,13 +187,13 @@ export default class EditAnimal extends Component {
         </Form.Group>
 
         <Form.Group controlId="Name">
-          <Form.Label>Age(Month)</Form.Label>
-          <Form.Control type="text" value={this.state.age} onChange={this.onChangeAnimalAge} />
+          <Form.Label>Born Date</Form.Label>
+          <Form.Control type="Date" value={this.state.age} onChange={this.onChangeAnimalAge} />
         </Form.Group>
 
         <Form.Group controlId="Adopted">
           <Form.Label>Adopted</Form.Label>
-          <Form.Control type="text" value={this.state.adopted} onChange={this.onChangeAnimalAdopted} placeholder="Yes / No"/>
+          <Form.Check type="checkbox" label="Adopted" checked={this.state.adopted} value={this.state.adopted} onChange={this.onChangeAnimalAdopted} placeholder="Yes / No"/>
         </Form.Group>
         
         <Button variant="primary" size="lg" block="block" type="submit" >

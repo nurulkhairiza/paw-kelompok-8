@@ -154,8 +154,8 @@ export default class CreateAnimal extends Component {
         </Form.Group>
 
         <Form.Group controlId="Name">
-          <Form.Label>Age(Month)</Form.Label>
-          <Form.Control type="text" value={this.state.age} onChange={this.onChangeAnimalAge} />
+          <Form.Label>Born date</Form.Label>
+          <Form.Control type="Date" value={this.state.age} onChange={this.onChangeAnimalAge} />
         </Form.Group>
 
         <Form.Group controlId="Adopted">

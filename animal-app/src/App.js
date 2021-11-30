@@ -95,7 +95,7 @@ function App() {
 
             <Navbar.Brand>
               <Link to={"/animal-list"} className="nav-link">
-                Animal Shelter
+                Animal Shelter Book
               </Link>
             </Navbar.Brand>
 
