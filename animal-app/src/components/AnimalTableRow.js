@@ -67,7 +67,7 @@ export default class AnimalTableRow extends Component {
                     <Link className="edit-link" to={"/edit-animal/" + this.props.obj._id}>
                         Edit
                     </Link>
-                    <Button onClick={this.deleteAnimal} size="sm" variant="danger">Delete</Button>
+                    <Button onClick={this.deleteAnimal} size="sm" variant="danger" href={"/animal-list"}>Delete</Button>
                 </td>
             </tr>
         );

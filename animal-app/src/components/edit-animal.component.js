@@ -199,6 +199,9 @@ export default class EditAnimal extends Component {
         <Button variant="primary" size="lg" block="block" type="submit" >
           Update
         </Button>
+        <Button size="lg" block="block"  variant="danger" type="button" href={'/animal-list'} >
+          Cancel
+        </Button>
       </Form>
     </div>);
   }

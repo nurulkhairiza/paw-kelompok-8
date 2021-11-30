@@ -93,7 +93,7 @@ export default class AnimalList extends Component {
           <tr>
             <th>Name</th>
             <th>Species</th>
-            <th>Age(Month)</th>
+            <th>Age</th>
             <th>Adopted</th>
             <th>Action</th>
           </tr>

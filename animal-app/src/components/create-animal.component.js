@@ -159,7 +159,7 @@ export default class CreateAnimal extends Component {
         </Form.Group>
 
         <Form.Group controlId="Adopted">
-          <Form.Label>Adopted</Form.Label>
+          <Form.Label>Adoption Status</Form.Label>
           <Form.Check type="checkbox" label="Adopted" value={this.state.adopted} checked={this.state.adopted} onChange={this.onChangeAnimalAdopted} />
         </Form.Group>
 
