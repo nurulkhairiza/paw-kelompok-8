@@ -6,17 +6,26 @@ const Animal = require('../models/animal')
 
 // to get all data
 router.get('/', async(req,res) => {
-    try {
-        const animals = await Animal.find()
-        res.json(animals)
-    }
-    catch (error) {
-        res.status(500).send(error.message)
-    }
+    animal.find((error, data) => {
+        if (error) {
+          return next(error)
+        } else {
+          res.json(data)
+        }
+      })
+    
+    // try {
+    //     // const animals = await Animal.find()
+    //     res.json(animals)
+    // }
+    // catch (error) {
+    //     res.status(500).send(error.message)
+    
+
 })
 
 // to get certain data by id
-router.get('/:id', async(req,res) => {
+router.get('/edit-animal/:id', async(req,res) => { //ubah
     try {
         const animal = await Animal.findById(req.params.id)
         res.json(animal)
@@ -27,7 +36,7 @@ router.get('/:id', async(req,res) => {
 })
 
 // add new data
-router.post('/', async(req,res) => {
+router.post('/create-animal', async(req,res) => { //ubah
     try {
         const animal = new Animal({
             name : req.body.name,
@@ -45,7 +54,7 @@ router.post('/', async(req,res) => {
 })
 
 //edit existing data
-router.patch('/:id', async(req,res) => {
+router.put('/update-animal/:id', async(req,res) => { //ubah patch--> put
     try {
         const animal = await Animal.findById(req.params.id)
 
@@ -71,7 +80,7 @@ router.patch('/:id', async(req,res) => {
 })
 
 // delete existing data
-router.delete('/:id', async(req,res) => {
+router.delete('/delete-animal/:id', async(req,res) => { //ubah
     try {
         const animal = await Animal.findById(req.params.id)
         animal.remove()

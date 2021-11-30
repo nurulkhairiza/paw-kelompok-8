@@ -1,3 +1,6 @@
+let cors = require('cors');//
+let bodyParser = require('body-parser');
+
 const express = require('express')
 const app = express ()
 
@@ -7,10 +10,20 @@ const url = 'mongodb://admin:admin123@cluster0-shard-00-00.u1nr6.mongodb.net:270
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 const dbcon = mongoose.connection
 
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+// app.use(cors()); //
 dbcon.on('error', (error) => console.error(error))
 dbcon.once('open', () => console.log('Database Connected...'))
 
 app.use(express.json())
+app.use(cors()); //
+
 
 const animalRouter = require('./routers/animals')
 app.use('/animals', animalRouter)

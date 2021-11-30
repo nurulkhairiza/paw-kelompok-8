@@ -24,9 +24,11 @@ const animalSchema = new mongoose.Schema({
         default : false
     }
 
-},
-
-{timestamps : true}
+}
+//  {
+//      collection: 'animals'
+//     }
+// {timestamps : true}
 
 )
 
