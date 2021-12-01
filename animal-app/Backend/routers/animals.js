@@ -54,7 +54,7 @@ router.post('/create-animal', async(req,res) => { //ubah
 })
 
 //edit existing data
-router.put('/update-animal/:id', async(req,res) => { //ubah patch--> put
+router.patch('/update-animal/:id', async(req,res) => { //ubah patch--> put
     try {
         const animal = await Animal.findById(req.params.id)
 
