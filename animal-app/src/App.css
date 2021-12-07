@@ -11,6 +11,11 @@ body h3 {
   color: #ffffff;
 }
 
+.navbar_bg {
+  background: rgb(235,0,255);
+  background: linear-gradient(141deg, rgba(235,0,255,1) 0%, rgba(20,20,189,1) 46%, rgba(0,212,255,1) 100%);
+}
+
 .form-wrapper,
 .table-wrapper {
   max-width: 500px;
@@ -63,4 +68,13 @@ body h3 {
   margin-right: 50px;
   display: inline-block;
   font-size: 16px;
+
+}.check-box-label {
+  margin-top: 10px;
+  margin-right: 50px;
 }
+
+.check-box {
+  margin-top: 10px;
+}
+

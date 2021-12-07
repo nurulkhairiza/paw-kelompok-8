@@ -20,8 +20,28 @@ export default class AnimalTableRow extends Component {
             })
     }
 
-    ageCalculator() {  
-        var dob = this.props.obj.age;  
+
+    render() {
+        return (
+            <tr>
+                <td>{this.props.obj.name}</td>
+                <td>{this.props.obj.species}</td>
+                <td>{this.ageCalculator(this.props.obj.age)}</td>
+                <td>{this.props.obj.adopted === false ? 'No' : "Yes"}</td>
+                <td>
+                    <Link className="edit-link" to={"/edit-animal/" + this.props.obj._id}>
+                        Edit
+                    </Link>
+                    <Button onClick={this.deleteAnimal} size="sm" variant="danger" href={"/animal-list"}>Delete</Button>
+                    <i class="bi bi-x-square"></i>
+                    
+                </td>
+            </tr>
+        );
+    }
+
+    ageCalculator(age) {  
+        var dob = new Date(age);  
           
 
         //extract the year, month, and date from user date input  
@@ -37,7 +57,7 @@ export default class AnimalTableRow extends Component {
         var currentDate = now.getDate();  
           
         //declare a variable to collect the age in year, month, and days  
-        var age = {};  
+        var animalAge = { };  
         var ageString = "";  
         
         //get years  
@@ -68,51 +88,34 @@ export default class AnimalTableRow extends Component {
           }  
         }  
         //group the age in a single variable  
-        age = {  
+        animalAge = {  
         years: yearAge,  
         months: monthAge,  
         days: dateAge  
         };  
             
             
-        if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )  
-           ageString = age.years + " years, " + age.months + " months, and " + age.days + " days old.";  
-        else if ( (age.years === 0) && (age.months === 0) && (age.days > 0) )  
-           ageString = "Only " + age.days + " days old!";  
+        if ( (animalAge.years > 0) && (animalAge.months > 0) && (animalAge.days > 0) )  
+           ageString = animalAge.years + " years " + animalAge.months + " months and " + animalAge.days + " days";  
+        else if ( (animalAge.years === 0) && (animalAge.months === 0) && (animalAge.days > 0) )  
+           ageString =  animalAge.days + " days";  
         //when current month and date is same as birth date and month  
-        else if ( (age.years > 0) && (age.months === 0) && (age.days === 0) )  
-           ageString = age.years +  " years old. Happy Birthday!!";  
-        else if ( (age.years > 0) && (age.months > 0) && (age.days === 0) )  
-           ageString = age.years + " years and " + age.months + " months old.";  
-        else if ( (age.years === 0) && (age.months > 0) && (age.days > 0) )  
-           ageString = age.months + " months and " + age.days + " days old.";  
-        else if ( (age.years > 0) && (age.months === 0) && (age.days > 0) )  
-           ageString = age.years + " years, and" + age.days + " days old.";  
-        else if ( (age.years === 0) && (age.months > 0) && (age.days === 0) )  
-           ageString = age.months + " months old.";  
+        else if ( (animalAge.years > 0) && (animalAge.months === 0) && (animalAge.days === 0) )  
+           ageString = animalAge.years +  " years";  
+        else if ( (animalAge.years > 0) && (animalAge.months > 0) && (animalAge.days === 0) )  
+           ageString = animalAge.years + " years and " + animalAge.months + " months";  
+        else if ( (animalAge.years === 0) && (animalAge.months > 0) && (animalAge.days > 0) )  
+           ageString = animalAge.months + " months and " + animalAge.days + " days";  
+        else if ( (animalAge.years > 0) && (animalAge.months === 0) && (animalAge.days > 0) )  
+           ageString = animalAge.years + " years, and" + animalAge.days + " days";  
+        else if ( (animalAge.years === 0) && (animalAge.months > 0) && (animalAge.days === 0) )  
+           ageString = animalAge.months + " months";  
         //when current date is same as dob(date of birth)  
-        else ageString = "Welcome to Earth! <br> It's first day on Earth!";   
+        else ageString = "0  days";   
       
         //display the calculated age  
         return ageString;   
                    
       
-    }
-
-    render() {
-        return (
-            <tr>
-                <td>{this.props.obj.name}</td>
-                <td>{this.props.obj.species}</td>
-                <td>{this.ageCalculator}</td>
-                <td>{this.props.obj.adopted}</td>
-                <td>
-                    <Link className="edit-link" to={"/edit-animal/" + this.props.obj._id}>
-                        Edit
-                    </Link>
-                    <Button onClick={this.deleteAnimal} size="sm" variant="danger" href={"/animal-list"}>Delete</Button>
-                </td>
-            </tr>
-        );
     }
 }
