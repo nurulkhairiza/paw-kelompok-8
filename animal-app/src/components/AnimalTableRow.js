@@ -26,20 +26,22 @@ export default class AnimalTableRow extends Component {
             <tr>
                 <td>{this.props.obj.name}</td>
                 <td>{this.props.obj.species}</td>
-                <td>{this.ageCalculator}</td>
+                <td>{this.ageCalculator(this.props.obj.age)}</td>
                 <td>{this.props.obj.adopted === false ? 'No' : "Yes"}</td>
                 <td>
                     <Link className="edit-link" to={"/edit-animal/" + this.props.obj._id}>
                         Edit
                     </Link>
                     <Button onClick={this.deleteAnimal} size="sm" variant="danger" href={"/animal-list"}>Delete</Button>
+                    <i class="bi bi-x-square"></i>
+                    
                 </td>
             </tr>
         );
     }
 
-    ageCalculator() {  
-        var dob = this.props.obj.age;  
+    ageCalculator(age) {  
+        var dob = new Date(age);  
           
 
         //extract the year, month, and date from user date input  

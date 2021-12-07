@@ -35,6 +35,7 @@ export default class AnimalList extends Component {
 
   render() {
     return (<div className="table-wrapper">
+      <h3> Animals Data Table </h3>
       <Table striped bordered hover>
         <thead>
           <tr>

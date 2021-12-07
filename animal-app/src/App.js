@@ -39,6 +39,7 @@ function App() {
                 <Link to={"/animal-list"} className="nav-link">
                   Animal List
                 </Link>
+                <i class="bi bi-list-task"></i>
               </Nav>
             </Nav>
 

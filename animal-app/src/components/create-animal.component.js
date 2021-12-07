@@ -55,7 +55,7 @@ export default class CreateAnimal extends Component {
     axios.post('http://localhost:8080/animals/create-animal', animalObject)
       .then(res => console.log(res.data));
 
-    this.props.history.push('/')
+    //this.props.history.push('/')
     // this.setState({
     //   name: '',
     //   species: '',
@@ -68,6 +68,7 @@ export default class CreateAnimal extends Component {
 
   render() {
     return (<div className="form-wrapper">
+      <h3 >Insert Animal Data </h3>
       <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="Name">
           <Form.Label>Name</Form.Label>
@@ -84,12 +85,14 @@ export default class CreateAnimal extends Component {
           <Form.Control type="Date" value={this.state.age} onChange={this.onChangeAnimalAge} />
         </Form.Group>
 
+        <div>
         <Form.Group controlId="Adopted">
-          <Form.Label>Adoption Status</Form.Label>
-          <Form.Check type="checkbox" label="Adopted" isSelected={this.state.adopted} onCheckboxChange={this.onChangeAnimalAge} />
+          <Form.Label>  Adoption Status</Form.Label>
+          <Form.Check as="input" class="form-check-input" type="checkbox" label="Adopted" value={this.state.adopted} onChange={this.onChangeAnimalAge}  />
         </Form.Group>
+        </div>
 
-        <Button className='button' variant="primary" size="lg" block="block" type="submit" href="/animal-list"> 
+        <Button onClick = {this.onSubmit} className='button' variant="primary" size="lg" block="block" type="submit" href="/animal-list"> 
           Add Animal
         </Button>
       </Form>

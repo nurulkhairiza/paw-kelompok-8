@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button';
+import  Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
 export default class EditAnimal extends Component {
@@ -21,7 +21,7 @@ export default class EditAnimal extends Component {
       name: '',
       species: '',
       age : '',
-      adopted:false
+      adopted: true
     }
   }
 
@@ -53,7 +53,7 @@ export default class EditAnimal extends Component {
   }
 
   onChangeAnimalAdopted(e) {
-    this.setState({ adopted: e.target.value })
+    this.setState({ adopted: !this.state.adopted })
   }
 
   onSubmit(e) {
@@ -82,8 +82,9 @@ export default class EditAnimal extends Component {
 
   render() {
     return (<div className="form-wrapper">
+      <h3 align='left'>Update Animal Data</h3>
       <Form onSubmit={this.onSubmit}>
-        <Form.Group controlId="Name">
+      <Form.Group controlId="Name">
           <Form.Label>Name</Form.Label>
           <Form.Control type="text" value={this.state.name} onChange={this.onChangeAnimalName} />
         </Form.Group>
@@ -94,15 +95,15 @@ export default class EditAnimal extends Component {
         </Form.Group>
 
         <Form.Group controlId="Name">
-          <Form.Label>Born Date</Form.Label>
+          <Form.Label>Born date</Form.Label>
           <Form.Control type="Date" value={this.state.age} onChange={this.onChangeAnimalAge} />
         </Form.Group>
 
         <Form.Group controlId="Adopted">
-          <Form.Label>Adopted</Form.Label>
-          <Form.Check type="checkbox" label="Adopted" checked={this.state.adopted} value={this.state.adopted} onChange={this.onChangeAnimalAdopted} placeholder="Yes / No"/>
+          <Form.Label className="check-box-label">Adoption Status</Form.Label>
+          <Form.Check as="input" className="check-box" type="checkbox" label="Adopted" value={this.state.adopted} onChange={this.onChangeAnimalAge}  />
         </Form.Group>
-        
+
         <Button className = "button" variant="primary" size="lg" block="block" type="submit"  >
           Update
         </Button>
