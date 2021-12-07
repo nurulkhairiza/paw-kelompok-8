@@ -101,7 +101,7 @@ export default class EditAnimal extends Component {
 
         <Form.Group controlId="Adopted">
           <Form.Label className="check-box-label">Adoption Status</Form.Label>
-          <Form.Check as="input" className="check-box" type="checkbox" label="Adopted" value={this.state.adopted} onChange={this.onChangeAnimalAge}  />
+          <Form.Check as="input" className="check-box" type="checkbox" label="Adopted" checked = {this.state.adopted} value={this.state.adopted} onChange={this.onChangeAnimalAdopted}  />
         </Form.Group>
 
         <Button className = "button" variant="primary" size="lg" block="block" type="submit"  >

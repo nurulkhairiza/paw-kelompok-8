@@ -96,7 +96,7 @@ export default class AnimalTableRow extends Component {
             
             
         if ( (animalAge.years > 0) && (animalAge.months > 0) && (animalAge.days > 0) )  
-           ageString = animalAge.years + " years, " + animalAge.months + " months, and " + animalAge.days + " days";  
+           ageString = animalAge.years + " years " + animalAge.months + " months and " + animalAge.days + " days";  
         else if ( (animalAge.years === 0) && (animalAge.months === 0) && (animalAge.days > 0) )  
            ageString =  animalAge.days + " days";  
         //when current month and date is same as birth date and month  

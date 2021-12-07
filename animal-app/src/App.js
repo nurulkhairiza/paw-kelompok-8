@@ -19,7 +19,7 @@ function App() {
   return (<Router>
     <div className="App">
       <header className="App-header">
-        <Navbar bg="dark" variant="dark">
+        <Navbar className="navbar_bg" variant="dark">
           <Container>
 
             <Navbar.Brand>
