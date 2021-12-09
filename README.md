@@ -4,6 +4,8 @@
 
 link deployment : https://paw-kelompok-8.vercel.app/
 
+link video : https://drive.google.com/file/d/14bZmIS1fAfPd8ccrY9J7M2G0J6mw2NzF/view?usp=sharing
+
 API ini menggunakan MongoDB untuk database, Express untuk web framework, dan Node untuk backend. 
 Aplikasi Web yang kami rancang berupa aplikasi yang menampilkan daftar hewan-hewan pada suatu shelter. Aplikasi web ini memungkinkan kita untuk bisa melihat apa aja daftar hewan yang masih ada di shelter, kemudian statusnya apakah sudah diadopsi atau yang belum diadopsi sekalipun.
 Dengan adanya aplikasi web ini, diharapkan dapat mempermudah dalam pendataan dan pengelolaan data pada suatu shelter
